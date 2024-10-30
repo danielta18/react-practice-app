@@ -1,24 +1,21 @@
 import React from "react";
+import CardGenerator from "./card-generator";
+import Card from "./card";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+let people = [
+	{ name: "Daniel", gender: "male", ethnicity: "Italian"},
+	{ name: "George", gender: "male", ethnicity: "Bulgarian"},
+	{ name: "Derek", gender: "male", ethnicity: "Lebanese"},
+	{ name: "Nate", gender: "male", ethnicity: "Ethiopian"},
+	{ name: "Marjorie", gender: "female", ethnicity: "Ecuadorian"},
+	{ name: "Redando", gender: "male", ethnicity: "Haitian"}
+]
 
-//create your first component
+
 const Home = () => {
 	return (
 		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<CardGenerator people={people}/>
 		</div>
 	);
 };
